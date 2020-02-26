@@ -1,0 +1,29 @@
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  @apply text-grey-dark bg-grey-lightest;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-medium tracking-wider;
+}
+
+h2 {
+  @apply mb-4 text-3xl;
+}
+
+a {
+  @apply trans trans-colors underline;
+}
+p {
+  @apply mb-4 leading-relaxed;
+}
+ol {
+  list-style-type: decimal-leading-zero;
+}
+
+[v-cloak] {
+  @apply opacity-0;
+}

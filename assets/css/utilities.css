@@ -1,0 +1,22 @@
+/* Custom utilities */
+.trans {
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+.trans-colors {
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, border-color, color, fill, stroke;
+}
+.trans-opacity {
+  transition-property: opacity;
+}
+
+@variants responsive {
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+  .-rotate-10 {
+    transform: rotate(-10deg);
+  }
+}

@@ -1,0 +1,14 @@
+[
+  { "color": "bg-blue", "name": "painting", "label": "peinture" },
+  { "color": "bg-yellow", "name": "sculpting", "label": "sculpture" },
+  {
+    "color": "bg-red text-white",
+    "name": "photography",
+    "label": "photo<span class=\"hidden md:inline\">graphie</span>"
+  },
+  {
+    "color": "bg-grey-lightest",
+    "name": "misc",
+    "label": "autre<span class=\"hidden md:inline\"> technique</span>"
+  }
+]

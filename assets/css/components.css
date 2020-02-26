@@ -1,0 +1,39 @@
+/* Custom components */
+.btn {
+  @apply bg-red px-8 py-4 tracking-wider uppercase rounded text-white no-underline border-3 border-transparent transition transition-colors;
+
+  &:hover {
+    @apply bg-red-dark;
+  }
+
+  &:disabled {
+    @apply bg-grey text-white-50;
+  }
+}
+
+.slidenav {
+  @apply btn text-center absolute rounded-full text-4xl top-1/2 -mt-8 z-50;
+
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+.bullet {
+  @apply rounded-full h-6 w-6 block absolute left-1/2 -ml-3 -mb-3;
+  bottom: -2px; /* visual fix */
+}
+
+.field {
+  @apply bg-white px-12 py-6 tracking-wide uppercase rounded text-grey-dark border-3 border-grey-lighter outline-none;
+}
+
+/* Transitions  */
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  @apply opacity-0;
+}

@@ -1,0 +1,40 @@
+{
+  "contact": {
+    "name": "Association Place des Arts",
+    "address": "4 rue Noire",
+    "city": "Bischheim",
+    "zipcode": "67800",
+    "email": "contact@placedesarts.net",
+    "phone": "0608048184"
+  },
+  "creation": {
+    "label": "Noémie Poncet",
+    "url": "http://noemieponcet.com"
+  },
+  "name": "Place des Arts",
+  "partners": [
+    {
+      "name": "Le géant des beaux arts",
+      "src": "logo-geantdesbeauxarts.png",
+      "url": "http://www.geant-beaux-arts.fr/"
+    },
+    {
+      "name": "Starsbourg.eu",
+      "src": "logo-strasbourg.svg",
+      "url": "https://www.strasbourg.eu/"
+    }
+  ],
+  "socials": [
+    {
+      "label": "Facebook",
+      "icon": "facebook-square",
+      "url": "http://www.facebook.com/pages/Place-des-Arts-Strasbourg/366058633413937"
+    },
+    {
+      "label": "Instagram",
+      "icon": "instagram",
+      "url": "https://www.instagram.com/placedesartsstrasbourg/"
+    }
+  ],
+  "url": "placedesarts.net"
+}

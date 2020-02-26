@@ -1,0 +1,25 @@
+[
+  {
+    "target": "#inscription",
+    "label": "<span class='hidden md:inline-block'>S'inscrire /</span> Exposer"
+  },
+  {
+    "target": "#expositions",
+    "label": "Expositions",
+    "style": "hidden md:inline-block",
+    "yearly": true
+  },
+  {
+    "target": "#association-contact",
+    "label": "Contact"
+  },
+  {
+    "target": "#artistes",
+    "label": "Les artistes"
+  },
+  {
+    "target": "#partenaires",
+    "label": "Nos partenaires",
+    "style": "hidden lg:inline-block"
+  }
+]
