@@ -597,7 +597,7 @@ export default {
         dates: [
           "May 16, 2020",
           "July 04, 2020",
-          "September 19, 2020",
+          "September 05, 2020",
           "October 24, 2020"
         ],
         validated: true
