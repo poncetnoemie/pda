@@ -755,10 +755,14 @@ export default {
         localStorage.setItem("passLoader", true);
       }, 1000);
     }
+    if (!localStorage.getItem("passAlert")) {
+      setTimeout(() => {
+        this.showModal("covid", "Message de l'association");
+        localStorage.setItem("passAlert", true);
+      }, 1500);
+    }
+
     clearAllBodyScrollLocks();
-    setTimeout(() => {
-      this.showModal("covid", "Message de l'association");
-    }, 1500);
   }
 };
 </script>

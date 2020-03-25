@@ -56,6 +56,6 @@ export default {
     extend(config, ctx) {}
   },
   purgeCSS: {
-    whitelist: ["md:inline-block", "lg:inline-block", "bg-red", "text-white"]
+    whitelist: ["md:inline-block", "lg:inline-block", "bg-red", "text-white","w-1/4"]
   }
 };
