@@ -759,7 +759,7 @@ export default {
       setTimeout(() => {
         this.showModal("covid", "Message de l'association");
         localStorage.setItem("passAlert", true);
-      }, 1500);
+      }, 2000);
     }
 
     clearAllBodyScrollLocks();
