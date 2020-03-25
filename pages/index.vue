@@ -37,11 +37,23 @@
               >
                 <li
                   class="py-1 md:py-3 px-5 md:w-1/4 md:w-full"
-                  :class="checkExpoDate(date) ? 'text-grey-light' : ''"
+                  :class="
+                    checkExpoDate(date) || checkCanceledExpoDate(date)
+                      ? 'opacity-50'
+                      : ''
+                  "
                   v-for="(date, index) in expositions.dates"
                   :key="index"
                 >
-                  <span v-html="getDateLabel(date)"></span>
+                  <span
+                    :class="checkCanceledExpoDate(date) ? 'line-through' : ''"
+                    v-html="getDateLabel(date)"
+                  ></span>
+                  <span
+                    class="uppercase font-bold"
+                    v-if="checkCanceledExpoDate(date)"
+                    >annulées</span
+                  >
                 </li>
               </ul>
               <div
@@ -204,20 +216,36 @@
                 >
                 <span v-else>Notez bien ces dates dans votre agenda !</span>
               </div>
-              <ul class="flex justify-between pb-24 text-sm sm:text-md">
+              <ul class="flex justify-between pb-20 text-sm sm:text-md">
                 <li
-                  class="border-b-5 border-grey-light p-4 pb-8 w-1/4 text-center relative"
-                  :class="checkExpoDate(date) ? 'text-grey-light' : ''"
+                  class="border-b-5 border-grey-light p-4 pb-8 text-center relative"
+                  :class="
+                    'w-1/' +
+                      expositions.dates.length +
+                      (checkExpoDate(date) || checkCanceledExpoDate(date)
+                        ? ' text-grey-light'
+                        : '')
+                  "
                   v-for="(date, index) in expositions.dates"
                   :key="index"
                 >
-                  <span v-html="getDateLabel(date)"></span>
+                  <span
+                    :class="checkCanceledExpoDate(date) ? 'line-through' : ''"
+                    v-html="getDateLabel(date)"
+                  ></span>
                   <span
                     class="bullet"
                     :class="
-                      checkExpoDate(date) ? 'bg-grey-light' : 'bg-red-dark'
+                      checkExpoDate(date) || checkCanceledExpoDate(date)
+                        ? 'bg-grey-light'
+                        : 'bg-red-dark'
                     "
                   ></span>
+                  <span
+                    class="uppercase font-bold"
+                    v-if="checkCanceledExpoDate(date)"
+                    >annulées</span
+                  >
                 </li>
               </ul>
             </div>
@@ -229,6 +257,12 @@
                   communiquées prochainement.
                 </p>
               </div>
+            </div>
+          </div>
+          <div id="annonce" class="flex flex-wrap w-full">
+            <div class="bg-white w-full px-6 py-8 lg:p-12">
+              <h2></h2>
+              <Alert />
             </div>
           </div>
           <!-- Map -->
@@ -492,6 +526,7 @@
         >
           <Reglement v-if="view.modal === 'reglement'" />
           <Mentions v-if="view.modal === 'mentions'" />
+          <Alert v-if="view.modal === 'covid'" />
           <div
             class="w-full h-screen-80 relative"
             v-if="view.modal === 'gallery'"
@@ -545,6 +580,7 @@ import Menu from "@/data/menu.json";
 import Site from "@/data/site.json";
 
 // Components
+import Alert from "@/components/Alert.vue";
 import Artist from "@/components/Artist.vue";
 import FixedHeader from "vue-fixed-header";
 import Mentions from "@/components/Mentions.vue";
@@ -586,7 +622,15 @@ export default {
     ]
   },
   name: "home",
-  components: { Artist, FixedHeader, Mentions, Modal, Reglement, SocialBox },
+  components: {
+    Alert,
+    Artist,
+    FixedHeader,
+    Mentions,
+    Modal,
+    Reglement,
+    SocialBox
+  },
   data: function() {
     return {
       artists: {
@@ -600,6 +644,7 @@ export default {
           "September 05, 2020",
           "October 24, 2020"
         ],
+        canceled: "May 16, 2020",
         validated: true
       },
       gallery: {
@@ -653,6 +698,9 @@ export default {
       } else {
         return false;
       }
+    },
+    checkCanceledExpoDate(date) {
+      return date === this.expositions.canceled;
     },
     getDateLabel(date) {
       let dateLabel;
@@ -708,6 +756,9 @@ export default {
       }, 1000);
     }
     clearAllBodyScrollLocks();
+    setTimeout(() => {
+      this.showModal("covid", "Message de l'association");
+    }, 1500);
   }
 };
 </script>
