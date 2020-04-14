@@ -1,20 +1,21 @@
 <template>
   <div>
-    <h2 class="text-red">Annulation expositions du mois de mai</h2>
+    <h2 class="text-red mb-2">
+      Annulation des expositions de mai et juillet
+      <p class="italic mb-8 text-sm">( Dernière mise à jour : 14/04/2020)</p>
+    </h2>
     <p>Chères artistes et cher artistes,</p>
     <p class="font-bold">
-      Compte-tenu de la période exceptionnelle que nous vivons actuellement, il
-      sera impossible de maintenir notre exposition Place des Arts initialement
-      prévue le 16 et 17 mai sur la Place Broglie de Strasbourg.
+      Compte-tenu de l'allocution de notre Président de la République en date du
+      13/04/2020 assurant qu'il n'y aura pas de regroupement public avant la
+      mi-juillet, il sera impossible de maintenir nos expositions Place des Arts
+      initialement prévue le 16 et 17 mai ainsi que celles du 04 et 05 juillet
+      sur la Place Broglie de Strasbourg.
     </p>
     <p>
       En effet, le confinement étant de rigueur, la ville de Strasbourg à
       interdit toute manifestation sur le Domaine Public et ce jusqu'à nouvel
-      ordre. Il n'y aura pas de report de date.<br />
-      Concernant l'exposition du 4 et 5 juillet, il est actuellement trop tôt
-      pour savoir si elle sera maintenue. Nous vous tiendrons au courant du
-      dossier qui est tributaire de la modification de la situation sanitaire
-      actuelle.
+      ordre.<br />Il n'y aura pas de report de date.
     </p>
     <p>
       Aujourd'hui, l'essentiel est la préservation de la Vie. Que ce soit la

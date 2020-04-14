@@ -644,7 +644,7 @@ export default {
           "September 05, 2020",
           "October 24, 2020"
         ],
-        canceled: "May 16, 2020",
+        canceled: ["May 16, 2020", "July 04, 2020"],
         validated: true
       },
       gallery: {
@@ -700,7 +700,7 @@ export default {
       }
     },
     checkCanceledExpoDate(date) {
-      return date === this.expositions.canceled;
+      return this.expositions.canceled.find(expo => expo === date);
     },
     getDateLabel(date) {
       let dateLabel;
@@ -755,10 +755,10 @@ export default {
         localStorage.setItem("passLoader", true);
       }, 1000);
     }
-    if (!localStorage.getItem("passAlert")) {
+    if (!localStorage.getItem("passAlert_14042020")) {
       setTimeout(() => {
         this.showModal("covid", "Message de l'association");
-        localStorage.setItem("passAlert", true);
+        localStorage.setItem("passAlert_14042020", true);
       }, 2000);
     }
 
