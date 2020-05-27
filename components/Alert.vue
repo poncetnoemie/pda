@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="text-red mb-2">
-      Annulation des expositions de mai et juillet
+      Annulation des expositions de mai & juillet
       <p class="italic mb-8 text-sm">( Dernière mise à jour : 14/04/2020)</p>
     </h2>
     <p>Chères artistes et cher artistes,</p>
