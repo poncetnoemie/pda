@@ -36,7 +36,7 @@
                 class="flex justify-between bg-green-full md:flex-col w-full text-xs md:text-sm text-center z-20 py-2"
               >
                 <li
-                  class="py-1 md:py-3 px-5 md:w-1/4 md:w-full"
+                  class="py-1 md:py-3 px-5 w-1/4 md:w-full"
                   :class="
                     checkExpoDate(date) || checkCanceledExpoDate(date)
                       ? 'opacity-50'
