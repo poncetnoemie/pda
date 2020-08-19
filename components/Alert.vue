@@ -1,33 +1,21 @@
 <template>
   <div>
     <h2 class="text-red mb-2">
-      Annulation des expositions de mai & juillet
-      <p class="italic mb-8 text-sm">( Dernière mise à jour : 14/04/2020)</p>
+      Exposition du 5 et 6 septembre 2020 confirmée
     </h2>
-    <p>Chères artistes et cher artistes,</p>
     <p class="font-bold">
-      Compte-tenu de l'allocution de notre Président de la République en date du
-      13/04/2020 assurant qu'il n'y aura pas de regroupement public avant la
-      mi-juillet, il sera impossible de maintenir nos expositions Place des Arts
-      initialement prévue le 16 et 17 mai ainsi que celles du 04 et 05 juillet
-      sur la Place Broglie de Strasbourg.
+      Les membres de l'association Place des Arts sont heureux de vous annoncer que l'exposition du 5 et 6 septembre aura bien lieu.
     </p>
     <p>
-      En effet, le confinement étant de rigueur, la ville de Strasbourg à
-      interdit toute manifestation sur le Domaine Public et ce jusqu'à nouvel
-      ordre.<br />Il n'y aura pas de report de date.
+    Ne connaissant pas encore les impératifs sécuritaires Anti-Covid 19 qui nous seront imposés, nous ne sommes pas en mesure actuellement de garantir la possibilité à des artistes non-inscrits à l'année 2020 de pouvoir exposer à ces dates.
+    Les artistes inscrits pour l'année 2020 pourront donc exposer en respectant les dispositions imposées.
+    Dès la connaissances des impératifs Anti-Covid 19, une information sera mise en ligne sur notre site.
     </p>
+    <p>Merci donc de vous connecter régulièrement pour vous tenir au courant des dernières dispositions.</p>
+    <p>Respectez les gestes barrières et protégez-vous bien.</p>
     <p>
-      Aujourd'hui, l'essentiel est la préservation de la Vie. Que ce soit la
-      notre ou celle des autres. Restons confinés et limitons nos déplacements
-      pour ne pas engorger nos hôpitaux ou des femmes et hommes, sans relâche,
-      contribuent à maintenir nos concitoyens vivants.<br />J'espère que vous
-      êtes en bonne santé et recevez au nom des membres de l'association nos
-      meilleurs pensées vitales.
-    </p>
-    <p>Cordialement.</p>
-    <p class="font-bold">
-      Philippe DOMINEAU Président de l'Association Place des Arts
+      Cordialement,<br />
+      <strong>Place des Arts</strong>
     </p>
   </div>
 </template>
