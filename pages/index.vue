@@ -756,10 +756,10 @@ export default {
       }, 1000);
     }
     // if (!localStorage.getItem("passAlert_14042020")) {
-    //   setTimeout(() => {
-    this.showModal("covid", "Message de l'association");
-    //     localStorage.setItem("passAlert_14042020", true);
-    //   }, 2000);
+    setTimeout(() => {
+      this.showModal("covid", "Message de l'association");
+      //     localStorage.setItem("passAlert_14042020", true);
+    }, 2000);
     // }
 
     clearAllBodyScrollLocks();

@@ -4,14 +4,30 @@
       Exposition du 5 et 6 septembre 2020 confirmée
     </h2>
     <p class="font-bold">
-      Les membres de l'association Place des Arts sont heureux de vous annoncer que l'exposition du 5 et 6 septembre aura bien lieu.
+      Les membres de l'association Place des Arts sont heureux de vous annoncer
+      que l'exposition du 5 et 6 septembre aura bien lieu.
     </p>
     <p>
-    Ne connaissant pas encore les impératifs sécuritaires Anti-Covid 19 qui nous seront imposés, nous ne sommes pas en mesure actuellement de garantir la possibilité à des artistes non-inscrits à l'année 2020 de pouvoir exposer à ces dates.
-    Les artistes inscrits pour l'année 2020 pourront donc exposer en respectant les dispositions imposées.
-    Dès la connaissances des impératifs Anti-Covid 19, une information sera mise en ligne sur notre site.
+      Nous serons en mesure d'accepter tout artiste voulant exposer sur la place
+      à condition :
     </p>
-    <p>Merci donc de vous connecter régulièrement pour vous tenir au courant des dernières dispositions.</p>
+    <ul class="px-4 list-disc m-4">
+      <li class="font-bold">
+        d'avoir en sa possesion un masque + gel hydroalcoolique
+      </li>
+      <li>
+        <span class="font-bold"
+          >de respecter scrupuleusement les consignes Anti-Covid 19
+          (ci-dessous)</span
+        >
+        en plus du Règlement Place des Arts
+      </li>
+    </ul>
+    <img
+      src="@/assets/images/placedesarts-consignes-covid.jpg"
+      alt="Consignes Anti-Covid de la Place des Arts"
+      class="mb-4"
+    />
     <p>Respectez les gestes barrières et protégez-vous bien.</p>
     <p>
       Cordialement,<br />
