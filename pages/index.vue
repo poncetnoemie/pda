@@ -123,10 +123,11 @@
                   Les inscriptions pour participer aux expositions de la Place
                   des Arts sont désormais closes.
                 </p>
-                <p>
-                  Les dossiers d'inscriptions
-                  {{ subscription.year + 1 }} seront téléchargeables à partir du
-                  01 octobre {{ subscription.year }}.
+                <p class="font-bold">
+                  Compte-tenu de la situation sanitaire exceptionnelle, les
+                  dossiers d'inscriptions {{ subscription.year + 1 }} seront
+                  téléchargeables à partir du {{ subscription.date }}
+                  {{ subscription.year }}.
                 </p>
                 <p>
                   Les souhaits de dates d'exposition
@@ -183,8 +184,8 @@
               <a
                 :href="
                   '@/docs/reglement-' +
-                    subscription.year +
-                    '-place-des-arts.pdf'
+                  subscription.year +
+                  '-place-des-arts.pdf'
                 "
                 class="btn self-end"
                 v-if="reglementDownload"
@@ -221,10 +222,10 @@
                   class="border-b-5 border-grey-light p-4 pb-8 text-center relative"
                   :class="
                     'w-1/' +
-                      expositions.dates.length +
-                      (checkExpoDate(date) || checkCanceledExpoDate(date)
-                        ? ' text-grey-light'
-                        : '')
+                    expositions.dates.length +
+                    (checkExpoDate(date) || checkCanceledExpoDate(date)
+                      ? ' text-grey-light'
+                      : '')
                   "
                   v-for="(date, index) in expositions.dates"
                   :key="index"
@@ -282,7 +283,7 @@
             <div
               class="flex flex-wrap flex-shrink-0 px-6 py-8 lg:p-12 w-full lg:w-1/3"
             >
-              <h2 class="w-full">
+             <h2 class="w-full">
                 Contact
               </h2>
               <div
@@ -659,6 +660,7 @@ export default {
       site: Site,
       reglementDownload: false,
       subscription: {
+        date: "16 novembre",
         isOpen: false,
         year: 2020
       },
@@ -766,7 +768,7 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="postcss">
 .bg-image {
   background-image: url("../assets/images/placedesarts-header.jpg");
   background-position: center 70%;
