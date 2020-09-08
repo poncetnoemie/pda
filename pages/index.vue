@@ -121,12 +121,12 @@
               <div v-else>
                 <p class="font-bold text-xl text-red leading-tight">
                   Les inscriptions pour participer aux expositions de la Place
-                  des Arts sont désormais closes.
+                  des Arts {{ subscription.year }} sont désormais closes.
                 </p>
                 <p class="font-bold">
                   Compte-tenu de la situation sanitaire exceptionnelle, les
-                  dossiers d'inscriptions {{ subscription.year + 1 }} seront
-                  téléchargeables à partir du {{ subscription.date }}
+                  dossiers d'inscriptions pour {{ subscription.year + 1 }} ne seront
+                  téléchargeables qu'à partir du {{ subscription.date }}
                   {{ subscription.year }}.
                 </p>
                 <p>
