@@ -527,7 +527,7 @@
         >
           <Reglement v-if="view.modal === 'reglement'" />
           <Mentions v-if="view.modal === 'mentions'" />
-          <Alert v-if="view.modal === 'covid'" />
+          <Alert v-if="view.modal === 'alert'" />
           <div
             class="w-full h-screen-80 relative"
             v-if="view.modal === 'gallery'"
@@ -757,11 +757,12 @@ export default {
         localStorage.setItem("passLoader", true);
       }, 1000);
     }
-    // if (!localStorage.getItem("passAlert_14042020")) {
-    setTimeout(() => {
-      this.showModal("covid", "Message de l'association");
-      //     localStorage.setItem("passAlert_14042020", true);
-    }, 2000);
+
+    // if (!localStorage.getItem("passAlert")) {
+    //   setTimeout(() => {
+    //     this.showModal("alert", "Message de l'association");
+    //     localStorage.setItem("passAlert", true);
+    //   }, 2000);
     // }
 
     clearAllBodyScrollLocks();
