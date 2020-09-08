@@ -260,9 +260,8 @@
               </div>
             </div>
           </div>
-          <div id="annonce" class="flex flex-wrap w-full">
+          <div id="annonce" class="flex flex-wrap w-full" v-if="showAlert">
             <div class="bg-white w-full px-6 py-8 lg:p-12">
-              <h2></h2>
               <Alert />
             </div>
           </div>
@@ -668,6 +667,7 @@ export default {
         isLoading: true,
         modal: null,
         modalTitle: null,
+        showAlert: false,
         showModal: false,
         year: new Date().getFullYear()
       }
