@@ -184,8 +184,8 @@
               <a
                 :href="
                   '@/docs/reglement-' +
-                    subscription.year +
-                    '-place-des-arts.pdf'
+                  subscription.year +
+                  '-place-des-arts.pdf'
                 "
                 class="btn self-end"
                 v-if="reglementDownload"
@@ -222,10 +222,10 @@
                   class="border-b-5 border-grey-light p-4 pb-8 text-center relative"
                   :class="
                     'w-1/' +
-                      expositions.dates.length +
-                      (checkExpoDate(date) || checkCanceledExpoDate(date)
-                        ? ' text-grey-light'
-                        : '')
+                    expositions.dates.length +
+                    (checkExpoDate(date) || checkCanceledExpoDate(date)
+                      ? ' text-grey-light'
+                      : '')
                   "
                   v-for="(date, index) in expositions.dates"
                   :key="index"
@@ -260,7 +260,7 @@
               </div>
             </div>
           </div>
-          <div id="annonce" class="flex flex-wrap w-full" v-if="showAlert">
+          <div id="annonce" class="flex flex-wrap w-full" v-if="view.showAlert">
             <div class="bg-white w-full px-6 py-8 lg:p-12">
               <Alert />
             </div>
@@ -589,7 +589,7 @@ import SocialBox from "@/components/SocialBox.vue";
 import {
   disableBodyScroll,
   enableBodyScroll,
-  clearAllBodyScrollLocks
+  clearAllBodyScrollLocks,
 } from "body-scroll-lock";
 
 const Months = [
@@ -604,7 +604,7 @@ const Months = [
   "Septembre",
   "Octobre",
   "Novembre",
-  "Décembre"
+  "Décembre",
 ];
 
 export default {
@@ -615,9 +615,9 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "L'association Place des Arts organise 4 fois par an sur la place Broglie de Strasbourg des expositions d'artistes photographes, sculpteurs et peintres."
-      }
-    ]
+          "L'association Place des Arts organise 4 fois par an sur la place Broglie de Strasbourg des expositions d'artistes photographes, sculpteurs et peintres.",
+      },
+    ],
   },
   name: "home",
   components: {
@@ -627,31 +627,31 @@ export default {
     Mentions,
     Modal,
     Reglement,
-    SocialBox
+    SocialBox,
   },
-  data: function() {
+  data: function () {
     return {
       artists: {
         items: Artists,
-        categories: Categories
+        categories: Categories,
       },
       expositions: {
         dates: [
           "May 16, 2020",
           "July 04, 2020",
           "September 05, 2020",
-          "October 24, 2020"
+          "October 24, 2020",
         ],
         canceled: ["May 16, 2020", "July 04, 2020"],
-        validated: true
+        validated: true,
       },
       gallery: {
         images: [
           { name: "placedesarts-gallery-01" },
           { name: "placedesarts-gallery-02" },
-          { name: "placedesarts-gallery-03" }
+          { name: "placedesarts-gallery-03" },
         ],
-        imageActive: null
+        imageActive: null,
       },
       menu: Menu,
       site: Site,
@@ -659,16 +659,16 @@ export default {
       subscription: {
         date: "16 novembre",
         isOpen: false,
-        year: 2020
+        year: 2020,
       },
       view: {
         isLoading: true,
         modal: null,
         modalTitle: null,
-        showAlert: false,
+        showAlert: true,
         showModal: false,
-        year: new Date().getFullYear()
-      }
+        year: new Date().getFullYear(),
+      },
     };
   },
   methods: {
@@ -700,7 +700,7 @@ export default {
       }
     },
     checkCanceledExpoDate(date) {
-      return this.expositions.canceled.find(expo => expo === date);
+      return this.expositions.canceled.find((expo) => expo === date);
     },
     getDateLabel(date) {
       let dateLabel;
@@ -741,7 +741,7 @@ export default {
     prevImage() {
       if (this.gallery.imageActive - 1 >= 0)
         this.gallery.imageActive = this.gallery.imageActive - 1;
-    }
+    },
   },
   created() {
     if (localStorage.getItem("passLoader")) {
@@ -764,7 +764,7 @@ export default {
     }
 
     clearAllBodyScrollLocks();
-  }
+  },
 };
 </script>
 <style lang="postcss">
