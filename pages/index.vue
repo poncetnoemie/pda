@@ -125,8 +125,8 @@
                 </p>
                 <p class="font-bold">
                   Compte-tenu de la situation sanitaire exceptionnelle, les
-                  dossiers d'inscriptions pour {{ subscription.year + 1 }} ne seront
-                  téléchargeables qu'à partir du {{ subscription.date }}
+                  dossiers d'inscriptions pour {{ subscription.year + 1 }} ne
+                  seront téléchargeables qu'à partir du {{ subscription.date }}
                   {{ subscription.year }}.
                 </p>
                 <p>
@@ -184,8 +184,8 @@
               <a
                 :href="
                   '@/docs/reglement-' +
-                  subscription.year +
-                  '-place-des-arts.pdf'
+                    subscription.year +
+                    '-place-des-arts.pdf'
                 "
                 class="btn self-end"
                 v-if="reglementDownload"
@@ -222,10 +222,10 @@
                   class="border-b-5 border-grey-light p-4 pb-8 text-center relative"
                   :class="
                     'w-1/' +
-                    expositions.dates.length +
-                    (checkExpoDate(date) || checkCanceledExpoDate(date)
-                      ? ' text-grey-light'
-                      : '')
+                      expositions.dates.length +
+                      (checkExpoDate(date) || checkCanceledExpoDate(date)
+                        ? ' text-grey-light'
+                        : '')
                   "
                   v-for="(date, index) in expositions.dates"
                   :key="index"
@@ -282,9 +282,7 @@
             <div
               class="flex flex-wrap flex-shrink-0 px-6 py-8 lg:p-12 w-full lg:w-1/3"
             >
-             <h2 class="w-full">
-                Contact
-              </h2>
+              <h2 class="w-full">Contact</h2>
               <div
                 class="flex flex-col sm:flex-row lg:flex-col w-full p-6 bg-white-25 mb-4"
               >
@@ -758,12 +756,12 @@ export default {
       }, 1000);
     }
 
-    // if (!localStorage.getItem("passAlert")) {
-    //   setTimeout(() => {
-    //     this.showModal("alert", "Message de l'association");
-    //     localStorage.setItem("passAlert", true);
-    //   }, 2000);
-    // }
+    if (!localStorage.getItem("passAlertOctober")) {
+      setTimeout(() => {
+        this.showModal("alert", "Message de l'association");
+        localStorage.setItem("passAlertOctober", true);
+      }, 2000);
+    }
 
     clearAllBodyScrollLocks();
   }
