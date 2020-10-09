@@ -11,17 +11,17 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-brands-svg-icons": "^5.12.1",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/vue-fontawesome": "^0.1.9",
-    "body-scroll-lock": "^2.6.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/vue-fontawesome": "^0.1.10",
+    "body-scroll-lock": "^2.7.1",
     "nuxt": "^2.14.3",
     "nuxt-purgecss": "^0.2.1",
-    "vue-fixed-header": "^3.2.14",
+    "vue-fixed-header": "^3.2.15",
     "vue-scrollactive": "^0.8.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^1.0.0"
+    "@nuxtjs/tailwindcss": "^1.4.1"
   }
 }
