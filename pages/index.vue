@@ -642,7 +642,7 @@ export default {
           "September 05, 2020",
           "October 24, 2020",
         ],
-        canceled: ["May 16, 2020", "July 04, 2020"],
+        canceled: ["May 16, 2020", "July 04, 2020","October 24, 2020"],
         validated: true,
       },
       gallery: {
@@ -756,12 +756,12 @@ export default {
       }, 1000);
     }
 
-    if (!localStorage.getItem("passAlertOctober")) {
+    //if (!localStorage.getItem("passAlertOctober")) {
       setTimeout(() => {
         this.showModal("alert", "Message de l'association");
         localStorage.setItem("passAlertOctober", true);
       }, 2000);
-    }
+    //}
 
     clearAllBodyScrollLocks();
   },
