@@ -784,10 +784,10 @@ export default {
         this.showModal("alert", "Message de l'association");
         localStorage.setItem("passAlertNovember", true);
       }, 2000);
-    }
+    //}
 
     clearAllBodyScrollLocks();
-  },
+  }
 };
 </script>
 <style lang="postcss">
