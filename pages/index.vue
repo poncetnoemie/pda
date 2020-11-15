@@ -784,12 +784,14 @@ export default {
         this.showModal("alert", "Message de l'association");
         localStorage.setItem("passAlertNovember", true);
       }, 2000);
-    //}
+      //}
 
-    clearAllBodyScrollLocks();
-  }
+      clearAllBodyScrollLocks();
+    }
+  },
 };
 </script>
+
 <style lang="postcss">
 .bg-image {
   background-image: url("../assets/images/placedesarts-header.jpg");
