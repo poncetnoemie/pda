@@ -33,8 +33,11 @@
               v-if="expositions.dates"
             >
               <ul
-                class="flex justify-between bg-green-full md:flex-col w-full text-xs md:text-sm text-center z-20 py-2"
+                class="flex justify-betwee items-centern bg-green-full md:flex-col w-full text-xs md:text-sm text-center z-20 py-2"
               >
+                <li class="font-bold text-lg self-center my-2 ml-4 md:ml-0">
+                  {{ subscription.year }}
+                </li>
                 <li
                   class="py-1 md:py-3 px-5 w-1/4 md:w-full"
                   :class="
@@ -113,10 +116,16 @@
                     >merci de ne pas l'envoyer en recommandé</span
                   >. Un envoi en lettre simple est suffisant.
                 </p>
-                <button class="btn mt-4 mb-12 self-center">
+                <a
+                  download
+                  :href="
+                    './docs/dossierinscriptionpda' + subscription.year + '.zip'
+                  "
+                  class="btn mt-4 mb-12 self-center text-center"
+                >
                   Télécharger le dossier d'inscription
                   <font-awesome-icon icon="download" class="opacity-75 ml-2" />
-                </button>
+                </a>
               </div>
               <div v-else>
                 <p class="font-bold text-xl text-red leading-tight">
@@ -182,11 +191,8 @@
                 </ul>
               </div>
               <a
-                :href="
-                  '@/docs/reglement-' +
-                  subscription.year +
-                  '-place-des-arts.pdf'
-                "
+                download
+                :href="'./docs/reglementpda' + subscription.year + '.pdf'"
                 class="btn self-end"
                 v-if="reglementDownload"
               >
@@ -260,7 +266,11 @@
               </div>
             </div>
           </div>
-          <div id="annonce" class="flex flex-wrap w-full" v-if="view.showAlert">
+          <div
+            id="annonce"
+            class="flex flex-wrap w-full"
+            v-if="view.showAlertInline"
+          >
             <div class="bg-white w-full px-6 py-8 lg:p-12">
               <Alert />
             </div>
@@ -408,43 +418,55 @@
           </div>
           <!-- Artists -->
           <div id="artistes" class="bg-blue w-full px-6 py-8 lg:p-12">
-            <h2>
+            <h2 :class="{ 'mb-0': !artists.items.length }">
               Les Artistes<span class="hidden md:inline">
                 de la Place des Arts</span
               >
             </h2>
-            <p class="mb-8">
-              Retrouvez ci-dessous la liste complète des artistes inscrits pour
-              l'année {{ subscription.year }}.
-            </p>
-            <ul class="w-full list-inside">
-              <li class="flex items-center bg-white-25">
-                <div class="w-1/6 p-4 text-center font-bold">
-                  N° <span class="hidden md:inline-block">d'emplacement</span>
-                </div>
-                <div class="flex flex-grow justify-between py-4">
-                  <div>
-                    <span class="text-center w-24 px-6 hidden md:inline-block"
-                      >Email</span
-                    >
-                    <span class="ml-6 sm:ml-0">Nom</span>
+            <div v-if="artists.items.length > 0">
+              <p class="mb-8">
+                Retrouvez ci-dessous la liste complète des artistes inscrits
+                pour l'année {{ subscription.year }}.
+              </p>
+              <ul class="w-full list-inside">
+                <li class="flex items-center bg-white-25">
+                  <div class="w-1/6 p-4 text-center font-bold">
+                    N° <span class="hidden md:inline-block">d'emplacement</span>
                   </div>
-                  <span class="px-4"
-                    >Disciplines
-                    <span class="hidden md:inline-block"
-                      >artistiques</span
-                    ></span
-                  >
-                </div>
-              </li>
-              <li
-                v-for="(item, index) in artists.items"
-                :key="index"
-                class="bg-white border-b-2 border-blue block"
-              >
-                <Artist :item="item" :categories="artists.categories" />
-              </li>
-            </ul>
+                  <div class="flex flex-grow justify-between py-4">
+                    <div>
+                      <span class="text-center w-24 px-6 hidden md:inline-block"
+                        >Email</span
+                      >
+                      <span class="ml-6 sm:ml-0">Nom</span>
+                    </div>
+                    <span class="px-4"
+                      >Disciplines
+                      <span class="hidden md:inline-block"
+                        >artistiques</span
+                      ></span
+                    >
+                  </div>
+                </li>
+                <li
+                  v-for="(item, index) in artists.items"
+                  :key="index"
+                  class="bg-white border-b-2 border-blue block"
+                >
+                  <Artist :item="item" :categories="artists.categories" />
+                </li>
+              </ul>
+            </div>
+            <div v-else>
+              <p class="italic opacity-50 mb-8">
+                Inscriptions {{ subscription.year }} en cours.
+              </p>
+              <p>
+                La liste des
+                <strong>artistes exposés en {{ subscription.year }}</strong>
+                sera publiée une fois les inscriptions closes.
+              </p>
+            </div>
           </div>
           <!-- Partners -->
           <div id="partenaires" class="w-full">
@@ -637,13 +659,13 @@ export default {
       },
       expositions: {
         dates: [
-          "May 16, 2020",
-          "July 04, 2020",
-          "September 05, 2020",
-          "October 24, 2020",
+          "May 15, 2021",
+          "July 03, 2021",
+          "September 04, 2021",
+          "October 23, 2021",
         ],
-        canceled: ["May 16, 2020", "July 04, 2020"],
-        validated: true,
+        canceled: [],
+        validated: false,
       },
       gallery: {
         images: [
@@ -655,17 +677,18 @@ export default {
       },
       menu: Menu,
       site: Site,
-      reglementDownload: false,
+      reglementDownload: true,
       subscription: {
         date: "16 novembre",
-        isOpen: false,
-        year: 2020,
+        isOpen: true,
+        year: 2021,
       },
       view: {
         isLoading: true,
         modal: null,
         modalTitle: null,
         showAlert: true,
+        showAlertInline: false,
         showModal: false,
         year: new Date().getFullYear(),
       },
@@ -756,10 +779,10 @@ export default {
       }, 1000);
     }
 
-    if (!localStorage.getItem("passAlertOctober")) {
+    if (!localStorage.getItem("passAlertNovember")) {
       setTimeout(() => {
         this.showModal("alert", "Message de l'association");
-        localStorage.setItem("passAlertOctober", true);
+        localStorage.setItem("passAlertNovember", true);
       }, 2000);
     }
 
