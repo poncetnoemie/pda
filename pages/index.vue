@@ -119,7 +119,7 @@
                 <a
                   download
                   :href="
-                    './docs/dossierinscriptionpda' + subscription.year + '.zip'
+                    './docs/dossierinscriptionpda' + subscription.year + '.pdf'
                   "
                   class="btn mt-4 mb-12 self-center text-center"
                 >
