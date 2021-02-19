@@ -132,23 +132,12 @@
                   Les inscriptions pour participer aux expositions de la Place
                   des Arts {{ subscription.year }} sont désormais closes.
                 </p>
-                <p class="font-bold">
-                  Compte-tenu de la situation sanitaire exceptionnelle, les
-                  dossiers d'inscriptions pour {{ subscription.year + 1 }} ne
-                  seront téléchargeables qu'à partir du {{ subscription.date }}
-                  {{ subscription.year }}.
-                </p>
                 <p>
                   Les souhaits de dates d'exposition
-                  {{ subscription.year + 1 }} émis par l'association à la ville
-                  de Strasbourg ne seront connus qu'aux alentours du mois
-                  d'octobre {{ subscription.year }} et seront ensuite soumis à
+                  {{ subscription.year }} émis par l'association à la ville
+                  de Strasbourg ont été soumis à
                   la validation des services de la ville (l'attente de
                   validation peut prendre plusieurs semaines).
-                </p>
-                <p>
-                  Les dates une fois validées par la ville de Strasbourg seront
-                  publiées sur notre site.
                 </p>
               </div>
               <p>
@@ -680,7 +669,7 @@ export default {
       reglementDownload: true,
       subscription: {
         date: "16 novembre",
-        isOpen: true,
+        isOpen: false,
         year: 2021,
       },
       view: {
