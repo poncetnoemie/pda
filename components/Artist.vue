@@ -6,13 +6,15 @@
     ></div>
     <div class="flex flex-grow justify-between items-center">
       <div class="flex items-center">
-        <a
-          :href="'mailto:' + item.email"
-          class="opacity-25 hover:opacity-75 transition-opacity cursor-pointer text-lg hidden md:inline-block text-center w-24 py-4 px-6"
+        <component
+          :href="item.email ? 'mailto:' + item.email : '#'"
+          class="opacity-25 transition-opacity text-lg hidden md:inline-block text-center w-24 py-4 px-6"
+          :class="{'hover:opacity-75' : item.email}"
           title="Envoyer un email à cet artiste"
+          :is="item.email ? 'a' : 'span'"
         >
           <font-awesome-icon icon="envelope" />
-        </a>
+        </component>
         <span class="inline-block ml-6 md:ml-0"
           >{{ item.firstName }} {{ item.lastName }}</span
         >
