@@ -62,7 +62,7 @@
     {
       "categories": {
         "painting":"",
-        "sculpting":"",
+        "sculpting":1,
         "photography":"",
         "misc":""
       },
@@ -194,7 +194,7 @@
     {
       "categories": {
         "painting":"",
-        "sculpting":"",
+        "sculpting":1,
         "photography":"",
         "misc":""
       },
