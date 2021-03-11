@@ -135,9 +135,12 @@
                 <p>
                   Les souhaits de dates d'exposition
                   {{ subscription.year }} émis par l'association à la ville
-                  de Strasbourg ont été soumis à
+                  de Strasbourg <span class="font-medium" v-if="expositions.validated">ont été validés.</span><span v-else>ont été soumis à
                   la validation des services de la ville (l'attente de
-                  validation peut prendre plusieurs semaines).
+                  validation peut prendre plusieurs semaines).</span>
+                </p>
+                <p class="font-bold">
+                  La tenue (ou non) de nos expositions sera conditionnée par les mesures sanitaires en vigueur à ce moment-là dans le cadre de la lutte contre la propagation du virus Covid 19.
                 </p>
               </div>
               <p>
@@ -244,6 +247,9 @@
                   >
                 </li>
               </ul>
+              <p class="px-24 pb-12 text-lg text-center font-bold">
+                 La tenue (ou non) de nos expositions sera conditionnée par les mesures sanitaires en vigueur à ce moment-là dans le cadre de la lutte contre la propagation du virus Covid 19.
+              </p>
             </div>
             <div v-else>
               <div class="px-6 lg:px-12 py-8">
@@ -654,7 +660,7 @@ export default {
           "October 23, 2021",
         ],
         canceled: [],
-        validated: false,
+        validated: true,
       },
       gallery: {
         images: [
