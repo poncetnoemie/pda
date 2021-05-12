@@ -247,7 +247,7 @@
                   >
                 </li>
               </ul>
-              <p class="px-24 pb-12 text-lg text-center font-bold">
+              <p class="px-24 pb-12 text-lg text-center font-bold hidden">
                  La tenue (ou non) de nos expositions sera conditionnée par les mesures sanitaires en vigueur à ce moment-là dans le cadre de la lutte contre la propagation du virus Covid 19.
               </p>
             </div>
@@ -266,7 +266,7 @@
             class="flex flex-wrap w-full"
             v-if="view.showAlertInline"
           >
-            <div class="bg-white w-full px-6 py-8 lg:p-12">
+            <div class="bg-white w-full px-6 py-8 lg:p-12 text-lg">
               <Alert />
             </div>
           </div>
@@ -654,7 +654,7 @@ export default {
       },
       expositions: {
         dates: [
-          "May 15, 2021",
+          "Jun 19, 2021",
           "July 03, 2021",
           "September 04, 2021",
           "October 23, 2021",
@@ -680,11 +680,11 @@ export default {
       },
       view: {
         isLoading: true,
-        modal: null,
-        modalTitle: null,
+        modal: "alert",
+        modalTitle: "Report de l'exposition de mai au 19 & 20 juin",
         showAlert: true,
-        showAlertInline: false,
-        showModal: false,
+        showAlertInline: true,
+        showModal: true,
         year: new Date().getFullYear(),
       },
     };
