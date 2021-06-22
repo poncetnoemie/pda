@@ -13,14 +13,33 @@
     </div>
     <div class="bg-grey-lightest lg:block" key="content" v-else>
       <div
-        class="flex flex-col w-full xl:max-w-screen-80 mx-auto xl:mx-screen-10 h-full bg-white"
+        class="
+          flex flex-col
+          w-full
+          xl:max-w-screen-80
+          mx-auto
+          xl:mx-screen-10
+          h-full
+          bg-white
+        "
         v-show="!view.isLoading"
       >
         <!-- Header -->
         <transition name="fade" appear mode="out-in">
           <header
             id="header"
-            class="bg-grey-light bg-cover overflow-hidden bg-no-repeat bg-image w-full h-screen-60 py-12 flex flex-col-reverse md:flex-row items-center justify-between"
+            class="
+              bg-grey-light bg-cover
+              overflow-hidden
+              bg-no-repeat bg-image
+              w-full
+              h-screen-60
+              py-12
+              flex flex-col-reverse
+              md:flex-row
+              items-center
+              justify-between
+            "
             v-show="!view.isLoading"
           >
             <img
@@ -29,11 +48,35 @@
               class="h-full max-h-75 m-auto md:mx-10"
             />
             <div
-              class="relative text-white flex justify-between items-center w-full md:w-auto -mt-12 mb-12 md:mb-0 md:-mt-4"
+              class="
+                relative
+                text-white
+                flex
+                justify-between
+                items-center
+                w-full
+                md:w-auto
+                -mt-12
+                mb-12
+                md:mb-0
+                md:-mt-4
+              "
               v-if="expositions.dates"
             >
               <ul
-                class="flex justify-betwee items-centern bg-green-full md:flex-col w-full text-xs md:text-sm text-center z-20 py-2"
+                class="
+                  flex
+                  justify-betwee
+                  items-centern
+                  bg-green-full
+                  md:flex-col
+                  w-full
+                  text-xs
+                  md:text-sm
+                  text-center
+                  z-20
+                  py-2
+                "
               >
                 <li class="font-bold text-lg self-center my-2 ml-4 md:ml-0">
                   {{ subscription.year }}
@@ -60,7 +103,19 @@
                 </li>
               </ul>
               <div
-                class="bg-yellow-full h-full w-48 absolute -rotate-10 mt-4 -mr-20 z-10 right-0 hidden md:block"
+                class="
+                  bg-yellow-full
+                  h-full
+                  w-48
+                  absolute
+                  -rotate-10
+                  mt-4
+                  -mr-20
+                  z-10
+                  right-0
+                  hidden
+                  md:block
+                "
               ></div>
             </div>
           </header>
@@ -70,7 +125,15 @@
           <div class="bg-white w-full md:px-4">
             <scrollactive
               active-class="font-bold"
-              class="flex flex-wrap justify-around leading-loose w-full text-sm sm:text-md sm:px-4"
+              class="
+                flex flex-wrap
+                justify-around
+                leading-loose
+                w-full
+                text-sm
+                sm:text-md
+                sm:px-4
+              "
               :duration="800"
               highlightFirstItem
               :offset="76"
@@ -83,7 +146,15 @@
                 />
               </a>
               <a
-                class="py-6 whitespace-no-wrap no-underline tracking-wider uppercase hover:text-green scrollactive-item"
+                class="
+                  py-6
+                  whitespace-no-wrap
+                  no-underline
+                  tracking-wider
+                  uppercase
+                  hover:text-green
+                  scrollactive-item
+                "
                 v-for="(item, index) in menu"
                 :key="index"
                 :class="item.style"
@@ -134,13 +205,20 @@
                 </p>
                 <p>
                   Les souhaits de dates d'exposition
-                  {{ subscription.year }} émis par l'association à la ville
-                  de Strasbourg <span class="font-medium" v-if="expositions.validated">ont été validés.</span><span v-else>ont été soumis à
-                  la validation des services de la ville (l'attente de
-                  validation peut prendre plusieurs semaines).</span>
+                  {{ subscription.year }} émis par l'association à la ville de
+                  Strasbourg
+                  <span class="font-medium" v-if="expositions.validated"
+                    >ont été validés.</span
+                  ><span v-else
+                    >ont été soumis à la validation des services de la ville
+                    (l'attente de validation peut prendre plusieurs
+                    semaines).</span
+                  >
                 </p>
                 <p class="font-bold">
-                  La tenue (ou non) de nos expositions sera conditionnée par les mesures sanitaires en vigueur à ce moment-là dans le cadre de la lutte contre la propagation du virus Covid 19.
+                  La tenue (ou non) de nos expositions sera conditionnée par les
+                  mesures sanitaires en vigueur à ce moment-là dans le cadre de
+                  la lutte contre la propagation du virus Covid 19.
                 </p>
               </div>
               <p>
@@ -217,7 +295,13 @@
               </div>
               <ul class="flex justify-between pb-20 text-sm sm:text-md">
                 <li
-                  class="border-b-5 border-grey-light p-4 pb-8 text-center relative"
+                  class="
+                    border-b-5 border-grey-light
+                    p-4
+                    pb-8
+                    text-center
+                    relative
+                  "
                   :class="
                     'w-1/' +
                     expositions.dates.length +
@@ -248,7 +332,9 @@
                 </li>
               </ul>
               <p class="px-24 pb-12 text-lg text-center font-bold hidden">
-                 La tenue (ou non) de nos expositions sera conditionnée par les mesures sanitaires en vigueur à ce moment-là dans le cadre de la lutte contre la propagation du virus Covid 19.
+                La tenue (ou non) de nos expositions sera conditionnée par les
+                mesures sanitaires en vigueur à ce moment-là dans le cadre de la
+                lutte contre la propagation du virus Covid 19.
               </p>
             </div>
             <div v-else>
@@ -285,11 +371,26 @@
             class="flex flex-wrap w-full bg-green items-start"
           >
             <div
-              class="flex flex-wrap flex-shrink-0 px-6 py-8 lg:p-12 w-full lg:w-1/3"
+              class="
+                flex flex-wrap flex-shrink-0
+                px-6
+                py-8
+                lg:p-12
+                w-full
+                lg:w-1/3
+              "
             >
               <h2 class="w-full">Contact</h2>
               <div
-                class="flex flex-col sm:flex-row lg:flex-col w-full p-6 bg-white-25 mb-4"
+                class="
+                  flex flex-col
+                  sm:flex-row
+                  lg:flex-col
+                  w-full
+                  p-6
+                  bg-white-25
+                  mb-4
+                "
               >
                 <div class="w-full sm:w-1/3 lg:w-full">
                   <h3 class="text-lg mb-2">
@@ -321,7 +422,16 @@
               </div>
             </div>
             <div
-              class="bg-white flex flex-col w-full lg:w-2/3 justify-between px-6 py-8 lg:p-12"
+              class="
+                bg-white
+                flex flex-col
+                w-full
+                lg:w-2/3
+                justify-between
+                px-6
+                py-8
+                lg:p-12
+              "
             >
               <h2>
                 L'association
@@ -343,7 +453,15 @@
                 plus en plus nombreux et fidèles à ces rendez-vous.
               </p>
               <iframe
-                class="w-full h-player-sm md:h-player mt-4 mb-8 md:mt-8 md:mb-12"
+                class="
+                  w-full
+                  h-player-sm
+                  md:h-player
+                  mt-4
+                  mb-8
+                  md:mt-8
+                  md:mb-12
+                "
                 src="https://www.youtube.com/embed/nnJHNeEIGhM"
                 frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -377,7 +495,17 @@
           <!-- Galerie -->
           <div
             id="galerie"
-            class="flex flex-wrap items-center justify-center bg-yellow pl-6 pr-0 py-8 lg:p-12 lg:pr-6"
+            class="
+              flex flex-wrap
+              items-center
+              justify-center
+              bg-yellow
+              pl-6
+              pr-0
+              py-8
+              lg:p-12
+              lg:pr-6
+            "
           >
             <h2 class="w-full">Galerie photos</h2>
             <p class="w-full">Petit aperçu en images de nos expositions.</p>
@@ -493,7 +621,17 @@
               </div>
               <!-- Logos -->
               <div
-                class="bg-white py-20 px-12 lg:py-12 w-full lg:w-2/3 flex flex-col items-center justify-center"
+                class="
+                  bg-white
+                  py-20
+                  px-12
+                  lg:py-12
+                  w-full
+                  lg:w-2/3
+                  flex flex-col
+                  items-center
+                  justify-center
+                "
               >
                 <a
                   class="last:mt-16 cursor-pointer opacity-85 hover:opacity-100"
@@ -515,7 +653,16 @@
         <!-- Footer -->
         <footer
           id="footer"
-          class="bg-grey-lightest w-full px-8 py-12 text-sm flex items-start justify-between"
+          class="
+            bg-grey-lightest
+            w-full
+            px-8
+            py-12
+            text-sm
+            flex
+            items-start
+            justify-between
+          "
         >
           <div>
             <a :href="site.creation.url" target="_blank"
@@ -681,7 +828,7 @@ export default {
       view: {
         isLoading: true,
         modal: "alert",
-        modalTitle: "Report de l'exposition de mai au 19 & 20 juin",
+        modalTitle: "Conditions d'exposition 2022",
         showAlert: true,
         showAlertInline: true,
         showModal: true,
